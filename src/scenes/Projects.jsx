@@ -20,6 +20,11 @@ const Project = ({ title, desc }) => {
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`
   const projectTitle = title.split(' ').join('-').toLowerCase()
 
+  //Get Image extension
+  let re = /(?:\.([^.]+))?$/
+  console.log(projectTitle)
+  let imageExtension = re.exec(projectTitle)[1]
+  console.log(imageExtension)
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
@@ -92,14 +97,17 @@ const Projects = () => {
             title="ios AI API integration"
             desc="This app is connected to state of the art ChatGPT via API integration."
           />
-          <Project title="TBD" desc="TBD Description" />
+          <Project title="shopping-cart" desc="Clean and responsive book e-commerce store" />
           <Project
             title="iOS AI Assistant"
             desc="A native app that leverages RN tech for both Android and iOS"
           />
 
           {/* ROW 3 */}
-          <Project title="TBD2" desc="TBD Description" />
+          <Project
+            title="stripe-integration"
+            desc="Seemless checkout with secure payment integration using Stripe"
+          />
           <Project
             title="Dashboard Customization"
             desc="Dark Mode, Notifications, Settings and Download Reports."
