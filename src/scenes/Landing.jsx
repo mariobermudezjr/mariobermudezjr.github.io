@@ -2,9 +2,63 @@ import SocialMediaIcons from '../components/SocialMediaIcons'
 import useMediaQuery from '../hooks/useMediaQuery'
 import { motion } from 'framer-motion'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
+import { Chrono } from 'react-chrono'
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveLarge = useMediaQuery('(min-width: 1060px)')
+  const items = [
+    {
+      title: 'RN Dev.',
+      cardTitle: 'LB Studioz | Jul. 2017 - Jan. 2018',
+      url: '',
+      cardSubtitle:
+        'Responsible for day-to-day mockup design, collaboration and execution including feature prioritization, tracking, and timely delivery of executables as well as Front End lead for multiple projects.',
+      media: {
+        type: 'IMAGE',
+        source: {
+          url: 'https://images1.loopnet.com/i2/43QG3q2oR7Z71gD6xQi78gOm0rFmFWKXXxrTqYESI2A/112/200-Pine-Ave-Long-Beach-CA-200-PINE-1-HighDefinition.jpg',
+        },
+      },
+    },
+    {
+      title: 'Android Dev.',
+      cardTitle: 'Corsa Consulting | Sept. 2018 - Feb. 2019',
+      url: '',
+      cardSubtitle: 'Key Responsibilities:',
+      media: {
+        type: 'IMAGE',
+        source: {
+          url: 'https://images.squarespace-cdn.com/content/v1/54cfbd2fe4b031c963dba022/1452197725306-8I5PQ3U3MYXNJ1IQ13TT/image-asset.jpeg?format=1500w',
+        },
+      },
+    },
+    {
+      title: 'FE Dev.',
+      cardTitle: 'Corrigan Consulting | Apr. 2019 - Aug. 2019',
+      url: '',
+      cardSubtitle:
+        'Support AI Software Engineer with Front End workflow by participating and reviewing goals and tasks in bi-monthly meetings with stakeholders.',
+      media: {
+        type: 'IMAGE',
+        source: {
+          url: 'https://images1.loopnet.com/i2/43QG3q2oR7Z71gD6xQi78gOm0rFmFWKXXxrTqYESI2A/112/200-Pine-Ave-Long-Beach-CA-200-PINE-1-HighDefinition.jpg',
+        },
+      },
+    },
+    {
+      title: 'Product Manager',
+      cardTitle: 'LA Solar Group | May. 2021 - Oct. 2023',
+      url: '',
+      cardSubtitle:
+        'Responsible for day-to-day mockup design, collaboration and execution including feature prioritization, tracking, and timely delivery of executables as well as Front End lead for multiple projects.',
+      media: {
+        type: 'IMAGE',
+        source: {
+          url: 'https://d1gb2i0yetjsvi.cloudfront.net/wp-content/uploads/2023/06/87568845_3565300163541803_7669952507002486784_n-e1686855590414-768x583.jpg',
+        },
+      },
+    },
+  ]
 
   return (
     <section
@@ -12,7 +66,7 @@ const Landing = ({ setSelectedPage }) => {
       className="md:flex md:justify-between md:items-center gap-16 md:h-full py-10"
     >
       {/* IMAGE SECTION */}
-      <div className="basis-full z-10 mt-16 md:mt-32 flex justify-center md:order-2">
+      {/* <div className="basis-full z-10 mt-16 md:mt-32 flex justify-center md:order-2">
         {isAboveLarge ? (
           <div
             className="relative z-0 ml-20 before:absolute before:-top-20 before:-left-20 before:rounded-t-[400px]
@@ -31,7 +85,7 @@ const Landing = ({ setSelectedPage }) => {
             src="assets/profile-imag.png"
           />
         )}
-      </div>
+      </div> */}
 
       {/* MAIN TEXT */}
       <div className="z-30 basis-2/ mt-12 md:mt-32">
@@ -119,6 +173,51 @@ const Landing = ({ setSelectedPage }) => {
         >
           <SocialMediaIcons />
         </motion.div>
+
+        {/* TIMELINE
+        <motion.div
+          className="flex mt-5 justify-center md:justify-start mb-40"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.5 }}
+          transition={{ duration: 0.5 }}
+          variants={{
+            hidden: { opacity: 0, x: -50 },
+            visible: { opacity: 1, x: 0 },
+          }}
+        >
+          <div style={{ width: '100%', height: '52vh' }}>
+            <Chrono
+              items={items}
+              mediaSettings={{ align: 'center', fit: 'contain' }}
+              theme={{
+                primary: '#25CBFF',
+                secondary: 'blue',
+                cardBgColor: '#000B27',
+                titleColor: 'white',
+                titleColorActive: 'white',
+                color: '#FFF',
+              }}
+              fontSizes={{
+                cardSubtitle: '0.85rem',
+                cardText: '0.8rem',
+                cardTitle: '1rem',
+                title: '1rem',
+              }}
+              buttonTexts={{
+                first: 'Jump to First',
+                last: 'Jump to Last',
+                next: 'Next',
+                previous: 'Previous',
+              }}
+              mode="HORIZONTAL"
+              enableBreakPoint={true}
+              enableOutline={false}
+              scrollable
+              slideShow
+            />
+          </div>
+        </motion.div> */}
       </div>
     </section>
   )

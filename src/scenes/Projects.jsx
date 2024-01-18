@@ -100,7 +100,8 @@ const Projects = () => {
             desc="This app is connected to state of the art ChatGPT via API integration."
             link="https://www.google.com/"
           />
-          <Project title="e-Commerce" desc="Clean design with Strapi backend headless CMS." />
+          <Project title="shopping-cart" desc="Clean and responsive design with Strapi backend headless CMS." />
+
           <Project
             title="iOS AI Assistant"
             desc="A native app that leverages RN tech for both Android and iOS"
@@ -108,7 +109,13 @@ const Projects = () => {
           />
 
           {/* ROW 3 */}
-          <Project title="TBD2" desc="TBD Description" link="https://www.google.com/" />
+
+          <Project
+            title="stripe-integration"
+            desc="Seemless checkout with secure payment integration using Stripe"
+            link="https://www.google.com/"
+          />
+
           <Project
             title="Dashboard Customization"
             desc="Dark Mode, Notifications, Settings and Download Reports."
