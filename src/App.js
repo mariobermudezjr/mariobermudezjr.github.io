@@ -8,7 +8,8 @@ import Contact from './scenes/Contact'
 import Footer from './scenes/Footer'
 import useMediaQuery from './hooks/useMediaQuery'
 import { useEffect, useState } from 'react'
-import Testimonials from './scenes/Testimonials'
+// TODO: Sent out emails to previous clients/contacts for testimonials.
+// import Testimonials from './scenes/Testimonials'
 import { motion } from 'framer-motion'
 
 function App() {
