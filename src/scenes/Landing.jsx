@@ -174,7 +174,7 @@ const Landing = ({ setSelectedPage }) => {
           <SocialMediaIcons />
         </motion.div>
 
-        {/* TIMELINE */}
+        {/* TIMELINE
         <motion.div
           className="flex mt-5 justify-center md:justify-start mb-40"
           initial="hidden"
@@ -217,7 +217,7 @@ const Landing = ({ setSelectedPage }) => {
               slideShow
             />
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   )

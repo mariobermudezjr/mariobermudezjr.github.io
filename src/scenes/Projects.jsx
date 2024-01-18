@@ -20,11 +20,6 @@ const Project = ({ title, desc }) => {
     bg-grey z-30 flex flex-col justify-center items-center text-center p-16 text-deep-blue`
   const projectTitle = title.split(' ').join('-').toLowerCase()
 
-  //Get Image extension
-  let re = /(?:\.([^.]+))?$/
-  console.log(projectTitle)
-  let imageExtension = re.exec(projectTitle)[1]
-  console.log(imageExtension)
   return (
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
